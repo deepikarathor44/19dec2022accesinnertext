@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>inner html</title>
+    </head>
+    <body>
+         <div class="myclass">
+            <span>Hello</span>
+        </div>
+        <form>
+            <label for="fullname"> fullname</label>
+            <input type="text" id="fullname">
+            <label for="gender"> gender</label>
+           <select ID="GENDER">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">other</option>
+           </select >
+           <input type="button" value="submit" onclick="submitData()">
+        </form>
+        <script>
+            //I can write JS code before the closing body tag
+            
+            //Lets access the DOM element
+            // full form of DOM = "Document object model"
+            // object.method()
+            // document.getElementById();
+            // document.querySelector();
+
+            // element = tag
+
+            let e1 = document.querySelector('div.myclass'); //Assosiativity of the operator R TO L
+            
+            let D1=document.querySelector('#fullname');
+            let d2=document.querySelector('#GENDER');
+         
+            console.log(e1.innerText);
+
+            function submitData() {
+                console.log(D1.value);
+                console.log(d2.value);
+            }
+            
+        </script>
+     </body>
+    </html>
